@@ -12,7 +12,7 @@ function FrameFooter() {
                     <Link href={""}>Github</Link>
                 </div>
                 <div className="flex items-center ">
-                    <p className='text-xs uppercase'>[scroll down]</p>
+                    <p className='text-xs uppercase'>Copyright 2024</p>
                 </div>
             </nav>
         </footer>
