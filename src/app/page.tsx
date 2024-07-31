@@ -193,7 +193,7 @@ export default function Home() {
             </h1>
 
             <h2 className="uppercase md:text-8xl text-4xl md:col-span-4 md:mt-20 mt-10">
-              Let's Collaborate to make vision into reality.
+              Let&lsquo;s Collaborate to make vision into reality.
             </h2>
 
             <ul className="md:grid md:grid-cols-5 grid-cols-1 md:mt-20 mt-10 gap-5 gap-y-0 md:col-span-5 row-start-3">
