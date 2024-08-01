@@ -3,6 +3,7 @@ import FAQ from "@/components/faq-section";
 import Sections from "@/components/sections";
 import SkillSection from "@/components/skills-section";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Work {
   title: string;
@@ -41,7 +42,7 @@ interface HomeLayout {
   works: Section;
   projects_and_research: Section;
   about: AboutSection;
-  blogs: Section;
+  blogs?: Section;
   skills: SkillsSection;
   faq: FAQSection;
 }
@@ -58,15 +59,18 @@ const home: Home = {
       works: [
         {
           title: "SVIITCH RAW",
-          year: "JUN 2024"
+          year: "JUN 2024",
+          href: "https://www.sviitchraw.co.in/"
         },
         {
           title: "Bull Trendz Academy",
-          year: "DEC 2023"
+          year: "DEC 2023",
+          href: "https://www.bulltrendzacademy.com/"
         },
         {
           title: "tasQ",
-          year: "APR 2023"
+          year: "APR 2023",
+          href: "https://www.tasq.co.in/home"
         },
       ]
     },
@@ -98,18 +102,6 @@ const home: Home = {
         tools: ["Figma", "Excel", "PowerPoint", "ChatGPT", "Visual Studio Code", "AWS", "Vercel"],
         softSkills: ["Communication", "Rapport Building", "Product Planning", "Task Management", "Stakeholder Communication"]
       }
-    },
-    blogs: {
-      type: "section",
-      title: "Recent Blogs",
-      works: [
-        {
-          title: "How Internet Works?",
-        },
-        {
-          title: "What is Recommendation Engine?",
-        },
-      ]
     },
     faq: {
       type: "faq",
@@ -197,21 +189,29 @@ export default function Home() {
             </h2>
 
             <ul className="md:grid md:grid-cols-5 grid-cols-1 md:mt-20 mt-10 gap-5 gap-y-0 md:col-span-5 row-start-3">
-              <li className="py-4 col-span-2 border-b border-dashed flex justify-between">
-                <p>Email</p>
-                <p>hi@devashirvad.co.in</p>
+              <li className="col-span-2">
+                <Link href={"mailto:ashirvad.satapathy01@gmail.com"} className="py-4 border-b border-dashed flex justify-between">
+                  <p>Email</p>
+                  <p>hi@devashirvad.co.in</p>
+                </Link>
               </li>
-              <li className="py-4 col-span-2 col-start-4 border-b border-dashed flex justify-between">
-                <p>Github</p>
-                <p>dEvAshirvad</p>
+              <li className="col-span-2 col-start-4">
+                <Link href={"https://github.com/dEvAshirvad"} className="py-4 border-b border-dashed flex justify-between">
+                  <p>Github</p>
+                  <p>dEvAshirvad</p>
+                </Link>
               </li>
-              <li className="py-4 col-span-2  border-b border-dashed flex justify-between">
-                <p>Instagram</p>
-                <p>@helloJicky</p>
+              <li className="col-span-2">
+                <Link href={"https://www.instagram.com/hello_jicky?utm_source=qr&igsh=MWU3NWR5N2p3ejRnNQ=="} className="py-4  border-b border-dashed flex justify-between">
+                  <p>Instagram</p>
+                  <p>@helloJicky</p>
+                </Link>
               </li>
-              <li className="py-4 col-span-2 col-start-4  border-b border-dashed flex justify-between">
-                <p>LinkedIn</p>
-                <p>Ashirvad Satapathy</p>
+              <li className="col-span-2 col-start-4">
+                <Link href={"https://www.linkedin.com/in/ashirvad-satapathy-2291961b7"} className="py-4  border-b border-dashed flex justify-between">
+                  <p>LinkedIn</p>
+                  <p>Ashirvad Satapathy</p>
+                </Link>
               </li>
             </ul>
           </div>

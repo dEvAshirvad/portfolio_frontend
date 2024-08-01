@@ -12,7 +12,7 @@ function SkillSection({ index, title, skills }: { index: number, title: string, 
                         {title}
                     </h1>
 
-                    <div className="grid md:grid-cols-5 md:gap-y-20 md:mt-20 mt-10 md:col-span-5 grid-cols-1 gap-5">
+                    <div className="grid md:grid-cols-5 md:gap-y-20 md:mt-20 mt-10 md:col-span-5 grid-cols-1 gap-10">
                         {
                             Object.keys(skills).map((key, index) => {
                                 return <div className={`col-span-2 ${index % 2 !== 0 ? "md:col-start-4" : ""}`} key={index}>

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import Headers from "@/components/headers";
 import GridFrame from "@/components/grid-frame";
 import FrameFooter from "@/components/frame-footer";
+import dynamic from "next/dynamic";
+const Headers = dynamic(() => import('@/components/headers'), { ssr: false })
 
 const inter = JetBrains_Mono({ subsets: ["latin"] });
 

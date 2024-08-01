@@ -13,7 +13,7 @@ function AboutSection({ index, title, content }: { index: number, title: string,
                         {title}
                     </h1>
 
-                    <p className='border-y md:border-0 md:col-span-3 md:py-20 py-10 mt-10 md:row-start-2'>{content}</p>
+                    <p className='border-y md:border-0 md:col-span-3 md:py-20 py-10 mt-10 md:row-start-2 md:text-xl text-lg text-muted-foreground'>{content}</p>
 
                     <Image src={"/me.jpeg"} width={910} height={1066} alt='Ashirvad Satapathy' className='md:row-start-3 md:col-start-4 mt-10 md:col-span-2'>
 

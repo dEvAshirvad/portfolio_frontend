@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Sections({ index, title, lists }: { index: number, title: string, lists: Record<string, string>[] }) {
@@ -15,9 +16,11 @@ function Sections({ index, title, lists }: { index: number, title: string, lists
                     <ul className="border-y md:col-span-5 md:mt-20 mt-10">
                         {
                             lists.map((list, index) => {
-                                return <li key={index} className="py-5 border-b flex justify-between gap-5">
-                                    <h1 className='flex-1'>{list.title}</h1>
-                                    <p className='truncate'>{list.year}</p>
+                                return <li>
+                                    <Link href={list?.href || ""} key={index} className="py-5 border-b w-full flex justify-between gap-5">
+                                        <h1 className='flex-1'>{list.title}</h1>
+                                        <p className='truncate'>{list.year}</p>
+                                    </Link>
                                 </li>
                             })
                         }
