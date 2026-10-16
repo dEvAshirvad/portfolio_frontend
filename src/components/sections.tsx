@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-function Sections({ index, title, lists }: { index: number, title: string, lists: Record<string, string>[] }) {
+function Sections({ index, title, lists }: { index: number, title: string, lists: { title: string, year?: string, href?: string, link?: string }[] }) {
     return (
         <div className="pb-20">
             <div className="container">
@@ -17,7 +17,7 @@ function Sections({ index, title, lists }: { index: number, title: string, lists
                         {
                             lists.map((list, index) => {
                                 return <li key={index}>
-                                    <Link href={list?.href || ""} key={index} className="py-5 border-b w-full flex justify-between gap-5">
+                                    <Link href={list.link || list.href || ""} key={index} className="py-5 border-b w-full flex justify-between gap-5 focus-visible:outline focus-visible:outline-1 focus-visible:outline-dashed focus-visible:outline-offset-4 hover:text-muted-foreground">
                                         <h1 className='flex-1'>{list.title}</h1>
                                         <p className='truncate'>{list.year}</p>
                                     </Link>

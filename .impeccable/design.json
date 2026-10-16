@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T10:24:28Z",
+  "title": "Design System: dEvAshirvad",
+  "extensions": {
+    "colorMeta": {
+      "field-black": {
+        "role": "neutral",
+        "displayName": "Field Black",
+        "canonical": "hsl(0 0% 3.9%)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "index-white": {
+        "role": "primary",
+        "displayName": "Index White",
+        "canonical": "hsl(0 0% 98%)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "graphite-note": {
+        "role": "neutral",
+        "displayName": "Graphite Note",
+        "canonical": "hsl(0 0% 63.9%)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "guide": {
+        "role": "neutral",
+        "displayName": "Guide",
+        "canonical": "hsl(0 0% 14.9%)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "signal-green": {
+        "role": "secondary",
+        "displayName": "Signal Green",
+        "canonical": "#4ade80",
+        "tonalRamp": [
+          "oklch(15% 0.05 145)",
+          "oklch(26% 0.08 145)",
+          "oklch(38% 0.11 145)",
+          "oklch(50% 0.14 145)",
+          "oklch(62% 0.16 145)",
+          "oklch(73% 0.17 145)",
+          "oklch(84% 0.15 145)",
+          "oklch(95% 0.06 145)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name lockup, ASHIRVAD / SATAPATHY, desktop only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles in columns 4–5."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "The founder line, in Graphite Note."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Rows, FAQ answers, and footer links."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Header place and time, availability, captions, and the uppercase footer."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "chevron",
+        "value": "transform 200ms ease",
+        "purpose": "FAQ chevron rotates 180 degrees when the row opens."
+      }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "2xl", "value": "1400px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Wordmark",
+      "kind": "nav",
+      "refersTo": "wordmark",
+      "description": "Skewed tick plus dEvAshirvad, sitting in the fixed header.",
+      "html": "<div class=\"ds-wordmark\"><span class=\"ds-wordmark-tick\"></span><span>dEvAshirvad</span></div>",
+      "css": ".ds-wordmark { display: flex; align-items: center; gap: 8px; color: hsl(0 0% 98%); background: hsl(0 0% 3.9%); font-family: \"JetBrains Mono\", ui-monospace, monospace; font-size: 16px; font-weight: 400; line-height: 1.5; } .ds-wordmark-tick { width: 4px; height: 16px; background: hsl(0 0% 98%); transform: skewX(-25deg); }"
+    },
+    {
+      "name": "Availability",
+      "kind": "custom",
+      "refersTo": "availability",
+      "description": "Signal Green dot and the available-for-work status. The only chromatic chrome.",
+      "html": "<div class=\"ds-availability\"><span class=\"ds-availability-dot\"></span><span>Available for Work</span></div>",
+      "css": ".ds-availability { display: flex; align-items: center; gap: 8px; color: hsl(0 0% 98%); font-family: \"JetBrains Mono\", ui-monospace, monospace; font-size: 12px; letter-spacing: 0.025em; } .ds-availability-dot { width: 8px; height: 8px; border-radius: 9999px; background: #4ade80; }"
+    },
+    {
+      "name": "Ruled row",
+      "kind": "custom",
+      "refersTo": "ruled-row",
+      "description": "Featured-work index row. Title left, year right, solid guide rule.",
+      "html": "<a class=\"ds-ruled-row\" href=\"#\"><span>GreenWatch</span><span>SEP 2026</span></a>",
+      "css": ".ds-ruled-row { display: flex; justify-content: space-between; gap: 20px; width: 100%; padding: 20px 0; border-bottom: 1px solid hsl(0 0% 14.9%); background: hsl(0 0% 3.9%); color: hsl(0 0% 98%); font-family: \"JetBrains Mono\", ui-monospace, monospace; font-size: 16px; line-height: 1.5; text-decoration: none; } .ds-ruled-row:hover { color: hsl(0 0% 63.9%); } .ds-ruled-row:focus-visible { outline: 1px dashed hsl(0 0% 98%); outline-offset: 4px; }"
+    },
+    {
+      "name": "Dashed row",
+      "kind": "custom",
+      "refersTo": "dashed-row",
+      "description": "Contact, skill, and fact row. Label left, value right, dashed rule.",
+      "html": "<a class=\"ds-dashed-row\" href=\"#\"><span>Email</span><span>hi@devashirvad.co.in</span></a>",
+      "css": ".ds-dashed-row { display: flex; justify-content: space-between; gap: 20px; width: 100%; padding: 16px 0; border-bottom: 1px dashed hsl(0 0% 14.9%); background: hsl(0 0% 3.9%); color: hsl(0 0% 98%); font-family: \"JetBrains Mono\", ui-monospace, monospace; font-size: 16px; line-height: 1.5; text-decoration: none; } .ds-dashed-row:hover { color: hsl(0 0% 63.9%); } .ds-dashed-row:focus-visible { outline: 1px dashed hsl(0 0% 98%); outline-offset: 4px; }"
+    },
+    {
+      "name": "Section index",
+      "kind": "custom",
+      "refersTo": "wordmark",
+      "description": "Quiet slash index in an early column, headline in the late columns.",
+      "html": "<div class=\"ds-section\"><span class=\"ds-section-index\">/ 1</span><h2 class=\"ds-section-title\">Featured Work</h2></div>",
+      "css": ".ds-section { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; background: hsl(0 0% 3.9%); font-family: \"JetBrains Mono\", ui-monospace, monospace; } .ds-section-index { grid-column: 2; color: hsl(0 0% 14.9%); font-size: 30px; font-weight: 400; line-height: 1; } .ds-section-title { grid-column: 4 / span 2; margin: 0; color: hsl(0 0% 98%); font-size: 60px; font-weight: 400; line-height: 1; }"
+    },
+    {
+      "name": "Accordion trigger",
+      "kind": "button",
+      "refersTo": "ruled-row",
+      "description": "FAQ row. Opens in place. Chevron rotates when open.",
+      "html": "<button class=\"ds-accordion\" type=\"button\"><span>What is your experience with cloud services?</span><svg class=\"ds-accordion-chevron\" viewBox=\"0 0 15 15\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4 6l3.5 3.5L11 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"></path></svg></button>",
+      "css": ".ds-accordion { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 0; border: 0; border-bottom: 1px solid hsl(0 0% 14.9%); background: hsl(0 0% 3.9%); color: hsl(0 0% 98%); font-family: \"JetBrains Mono\", ui-monospace, monospace; font-size: 16px; font-weight: 500; line-height: 1.5; text-align: left; cursor: pointer; } .ds-accordion-chevron { flex: none; color: hsl(0 0% 63.9%); transition: transform 200ms ease; } .ds-accordion:hover { color: hsl(0 0% 63.9%); } .ds-accordion:focus-visible { outline: 1px dashed hsl(0 0% 98%); outline-offset: 4px; } .ds-accordion[aria-expanded=\"true\"] .ds-accordion-chevron { transform: rotate(180deg); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Field Index",
+    "overview": "The Field Index is a survey sheet for a person: numbered columns, dashed guides, and one green status mark. The page is near-black, set entirely in JetBrains Mono, and read like a record. Display names sit large and offset. Secondary copy is graphite. The interface stays quiet so the work, when it appears, is the only saturated thing on the page.\n\nDensity is sparse. A five-column grid holds the desktop. Two dashed guides hold the phone. Section titles occupy the right columns. Indexes occupy a column to their left. Lists are full-width rules. Space above a block is larger than the space inside it.",
+    "keyCharacteristics": [
+      "Near-black ground, near-white ink, one green status dot",
+      "JetBrains Mono at every size, from 12px labels to 96px names",
+      "Five-column sheet on desktop, two dashed guides on small screens",
+      "Square corners, dashed or solid rules, no shadows",
+      "Client color lives only inside project images"
+    ],
+    "rules": [
+      {
+        "name": "The Plate Rule",
+        "body": "Client palettes stay inside the project image. The sheet around that image remains Field Black, Index White, Graphite Note, and Signal Green.",
+        "section": "colors"
+      },
+      {
+        "name": "The Status Rule",
+        "body": "Signal Green appears once, as the availability dot. It is not a link color, a heading color, or a fill behind type.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Face Rule",
+        "body": "JetBrains Mono is the only voice. Do not introduce a second family for display, labels, or numerals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Surfaces do not lift. Hover, focus, and open states change a rule or a type color. They do not add shadow, blur, or a second surface.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep new pages on Field Black, in JetBrains Mono, inside the five-column sheet.",
+      "Do put the index or return in an early column and the title in the late columns.",
+      "Do separate blocks with 5rem above the content and rules between items.",
+      "Do set secondary sentences in Graphite Note. Reserve Guide for lines and the existing homepage index.",
+      "Do show a project as a full-width plate, then its facts as dashed rows."
+    ],
+    "donts": [
+      "Don't restyle the homepage to match a case study. The homepage is the source.",
+      "Don't bring client green, orange, cream, or gray out of the plate and into the chrome.",
+      "Don't use cards, pills, rounded shadcn buttons, or shadows on portfolio surfaces.",
+      "Don't promote Urbanist or add a second typeface.",
+      "Don't use Signal Green for anything except the availability dot.",
+      "Don't set readable copy in Guide. It disappears on Field Black."
+    ]
+  }
+}
