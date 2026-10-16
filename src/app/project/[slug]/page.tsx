@@ -48,16 +48,6 @@ export default function ProjectPage({ params }: PageProps) {
     <div className="pb-32 pt-20 selection:bg-foreground selection:text-background">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
-          <Link
-            href="/"
-            className="md:col-start-2 text-xl md:text-3xl text-muted-foreground focus-visible:outline focus-visible:outline-1 focus-visible:outline-dashed focus-visible:outline-offset-4 hover:text-foreground"
-          >
-            / Work
-          </Link>
-          <h1 className="md:col-start-4 md:col-span-2 text-3xl md:text-6xl text-balance">
-            {work.title}
-          </h1>
-
           {work.image ? (
             <Image
               src={work.image}
@@ -65,7 +55,7 @@ export default function ProjectPage({ params }: PageProps) {
               width={1500}
               height={844}
               priority
-              className="md:col-span-5 w-full h-auto mt-10 md:mt-20"
+              className="md:col-span-5 w-full h-auto"
             />
           ) : null}
 
